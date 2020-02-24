@@ -138,11 +138,13 @@ class SwipeablePanel extends Component {
       style,
       closeRootStyle,
       closeIconStyle,
-      barStyle
+      barStyle,
+      pointerEvents
     } = this.props;
 
     return showComponent ? (
       <Animated.View
+        pointerEvents={pointerEvents}
         style={[
           SwipeablePanelStyles.background,
           {
@@ -217,7 +219,8 @@ SwipeablePanel.propTypes = {
   onlyLarge: PropTypes.bool,
   openLarge: PropTypes.bool,
   barStyle: PropTypes.object,
-  noBar: PropTypes.bool
+  noBar: PropTypes.bool,
+  pointerEvents: PropTypes.oneOf(['auto', 'none', 'box-none']),
 };
 
 SwipeablePanel.defaultProps = {
@@ -231,7 +234,8 @@ SwipeablePanel.defaultProps = {
   showCloseButton: false,
   noBar: false,
   closeOnTouchOutside: false,
-  barStyle: {}
+  barStyle: {},
+  pointerEvents: 'auto'
 };
 
 const SwipeablePanelStyles = StyleSheet.create({
