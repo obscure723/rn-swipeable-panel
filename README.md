@@ -98,6 +98,7 @@ export default class App extends Component {
 | **barStyle**            | `Object`   | Use this prop to override bar style                      | `{}`    |
 | **closeOnTouchOutside** | `bool`     | Set true if you want to close panel by touching outside  | `false` |
 | **noBar**               | `bool`     | Set true if you want to remove gray bar                  | `false` |
+| **pointerEvents**       | `検索してね` | 親のViewにタッチイベントを伝達するかの設定                        | `false` |
 
 #### ⭐️ Show Your Support
 
